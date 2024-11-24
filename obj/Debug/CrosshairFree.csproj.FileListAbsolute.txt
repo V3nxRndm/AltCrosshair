@@ -1,9 +1,0 @@
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\bin\Debug\CrosshairFree.exe.config
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\bin\Debug\CrosshairFree.exe
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\bin\Debug\CrosshairFree.pdb
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.csproj.AssemblyReference.cache
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.Properties.Resources.resources
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.csproj.GenerateResource.cache
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.csproj.CoreCompileInputs.cache
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.exe
-C:\Users\Anozyp\source\repos\CrosshairFree\CrosshairFree\obj\Debug\CrosshairFree.pdb
