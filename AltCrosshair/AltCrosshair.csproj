@@ -5,7 +5,10 @@
 		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
 		<RootNamespace>AltCrosshair</RootNamespace>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<!-- Setze die Plattform auf x64 -->
 		<Platforms>x64</Platforms>
+		<PlatformTarget>x64</PlatformTarget>
+		<!-- Setze den RuntimeIdentifier auf win-x64 -->
 		<RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
 		<PublishProfile>win-$(Platform).pubxml</PublishProfile>
 		<UseWinUI>true</UseWinUI>
