@@ -1,0 +1,38 @@
+name: Build and Release Windows Installer
+
+on:
+  push:
+    tags:
+      - 'v*' 
+
+jobs:
+  build-installer:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0'  # Oder deine verwendete Version
+
+    - name: Build .NET Project
+      run: |
+        dotnet restore
+        dotnet publish -c Release -r win-x64 --self-contained true -o .AltCrosshair/bin/Release/net6.0-windows/publish
+
+    - name: Install Inno Setup
+      run: |
+        choco install innosetup
+
+    - name: Build Installer with Inno Setup
+      run: |
+        InnoSetup Compiler AltCrosshair\Installer\Installer.iss
+
+    - name: Upload Installer as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: AltCrosshairInstaller
+        path: ./Output/AltCrosshairInstaller.exe  
