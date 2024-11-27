@@ -1,0 +1,60 @@
+<Window
+    x:Class="AltCrosshair.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="AltCrosshair"
+    >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar for Layer Controls -->
+        <StackPanel Grid.Column="0" Background="#f4f4f4" Padding="10" Spacing="10">
+            <TextBlock Text="Layers" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" />
+
+            <ListBox x:Name="LayerList" SelectionChanged="LayerList_SelectionChanged" Height="200" Margin="0,0,0,10" />
+
+            <Button Content="Add Layer" Click="AddLayer_Click" Margin="0,0,0,10" />
+            <Button Content="Remove Layer" Click="RemoveLayer_Click" />
+        </StackPanel>
+
+        <!-- Editor Panel -->
+        <Grid Grid.Column="1" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <!-- Properties Editor -->
+            <StackPanel Grid.Row="0" Spacing="10">
+                <TextBlock Text="Layer Properties" FontSize="20" FontWeight="Bold" />
+
+                <TextBlock Text="Width:" />
+                <Slider x:Name="WidthSlider" Minimum="1" Maximum="20" ValueChanged="WidthSlider_ValueChanged" />
+
+                <TextBlock Text="Size:" />
+                <Slider x:Name="SizeSlider" Minimum="10" Maximum="200" ValueChanged="SizeSlider_ValueChanged" />
+
+                <TextBlock Text="Roundness:" />
+                <Slider x:Name="RoundnessSlider" Minimum="0" Maximum="50" ValueChanged="RoundnessSlider_ValueChanged" />
+
+                <TextBlock Text="Color:" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="ColorPickerButton" Content="Pick Color" Click="ColorPickerButton_Click" />
+                    <Rectangle x:Name="ColorPreview" Width="50" Height="20" Margin="10,0,0,0" />
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Crosshair Preview -->
+            <Border Grid.Row="1" Background="#eaeaea" CornerRadius="5" Padding="10">
+                <Canvas x:Name="CrosshairCanvas" Background="#fff" />
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AltCrosshair (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AltCrosshair (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
